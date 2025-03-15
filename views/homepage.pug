@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Custom Object Table
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    div.container
+      h1 Custom Object Table
+      a.link(href="/update-cobj") Add/Update this table
+      table
+        thead
+          tr
+            th Name
+            th Favorite Toy
+            th Species
+        tbody
+          each obj in customObjects
+            tr
+              td= obj.properties.name
+              td= obj.properties.favorite_toy
+              td= obj.properties.species

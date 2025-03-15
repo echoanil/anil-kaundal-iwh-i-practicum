@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    div.container
+      div.form-wrapper
+        h1= title
+        form(action="/update-cobj" method="POST")
+          div.form-group
+            label(for="property1") Name:
+            input(type="text" name="property1" required)
+          div.form-group
+            label(for="property2") Favorite Toy:
+            input(type="text" name="property2" required)
+          div.form-group
+            label(for="property3") Species:
+            select(name="property3" required)
+              option(value="") Select a species
+              option(value="Bird") Bird
+              option(value="Cat") Cat
+              option(value="Dog") Dog
+          div.form-actions
+            input(type="submit" value="Submit" class="btn")
+        br
+        a.link(href="/") Return to the homepage
